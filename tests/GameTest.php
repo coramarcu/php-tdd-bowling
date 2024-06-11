@@ -8,4 +8,14 @@ class GameTest extends TestCase
             method_exists(Game::class, 'roll'), 'Method roll() does not exist in Game class'
         );
     }
+
+    public function testThatRollMethodUpdatesTheTotalWithPassedArgument() {
+        $game = new Game();
+        $total = $game->getTotal();
+
+        $this->assertEquals(0, $total);
+
+        $game->roll(5);
+        $this->assertEquals(5, $total);
+    }
 }
