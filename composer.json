@@ -1,0 +1,19 @@
+{
+  "name": "coramarcu/php-tdd-bowling",
+  "type": "project",
+  "require-dev": {
+    "phpunit/phpunit": "^11.2"
+  },
+  "autoload": {
+    "classmap": [
+      "src/"
+    ]
+  },
+  "authors": [
+    {
+      "name": "Cora Marcu",
+      "email": "coramarcu@gmail.com"
+    }
+  ],
+  "require": {}
+}
