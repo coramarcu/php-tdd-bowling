@@ -12,5 +12,6 @@ final class Game {
     }
 
     public function score(): int {
+        return $this->total;
     }
 }
