@@ -34,5 +34,15 @@ class GameTest extends TestCase
 
         $this->assertEquals(10, $game->score());
     }
+
+    public function testThatRollMethodIncrementsFrameProperty() {
+        $game = new Game();
+        $frames = $game->getFrames();
+        $this->assertEquals(0, $frames);
+
+        $game->roll(3);
+        $game->getFrames();
+        $this->assertEquals(1, $frames);
+    }
 }
 
