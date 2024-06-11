@@ -19,4 +19,11 @@ class GameTest extends TestCase
         $total = $game->getTotal();
         $this->assertEquals(5, $total);
     }
+
+    public function testScoreMethodExists() {
+        $this->assertTrue(
+            method_exists(Game::class, 'score'), 'Method score() does not exist in Game class'
+        );
+    }
 }
+
