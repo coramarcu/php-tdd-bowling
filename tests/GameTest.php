@@ -41,7 +41,7 @@ class GameTest extends TestCase
         $this->assertEquals(0, $frames);
 
         $game->roll(3);
-        $game->getFrames();
+        $frames = $game->getFrames();
         $this->assertEquals(1, $frames);
     }
 }
