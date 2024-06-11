@@ -16,6 +16,7 @@ class GameTest extends TestCase
         $this->assertEquals(0, $total);
 
         $game->roll(5);
+        $total = $game->getTotal();
         $this->assertEquals(5, $total);
     }
 }
