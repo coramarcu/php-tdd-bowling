@@ -25,5 +25,14 @@ class GameTest extends TestCase
             method_exists(Game::class, 'score'), 'Method score() does not exist in Game class'
         );
     }
+
+    public function testThatScoreMethodReturnsUpdatedTotal() {
+        $game = new Game();
+        $total = $game->getTotal();
+        $game->roll(10);
+        $total = $game->getTotal();
+
+        $this->assertEquals(10, $game->score());
+    }
 }
 
