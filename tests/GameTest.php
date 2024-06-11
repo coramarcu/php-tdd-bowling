@@ -59,9 +59,20 @@ class GameTest extends TestCase
     }
 
     public function testThatRollMethodCanBeCalledAMaxOf21Times() {
-        $gameMock = $this->createMock(Game::class);
+        // $gameMock = $this->createMock(Game::class);
 
-        $gameMock->expects($this->atMost(21))->method('roll');
+        // $gameMock->expects($this->atMost(21))->method('roll');
+
+        $game = new Game();
+        $rolls = $game->getRolls();
+        $this->assertEquals(0, $rolls);
+
+        for($i = 0; $i <= 25; $i++) {
+            $game->roll(1);
+        }
+
+        $rolls = $game->getRolls();
+        $this->assertEquals(21, $rolls);
     }
 }
 
