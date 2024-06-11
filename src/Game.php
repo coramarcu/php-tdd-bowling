@@ -10,4 +10,7 @@ final class Game {
     public function roll(int $pins_down): void {
         $this->total += $pins_down;
     }
+
+    public function score(): int {
+    }
 }
