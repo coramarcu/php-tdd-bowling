@@ -57,5 +57,11 @@ class GameTest extends TestCase
         $frames = $game->getFrames();
         $this->assertEquals(10, $frames);
     }
+
+    public function testThatRollMethodCanBeCalledAMaxOf21Times() {
+        $gameMock = $this->createMock(Game::class);
+
+        $gameMock->expects($this->atMost(21))->method('roll');
+    }
 }
 
