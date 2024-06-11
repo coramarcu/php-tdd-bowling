@@ -14,7 +14,10 @@ final class Game {
 
     public function roll(int $pins_down): void {
         $this->total += $pins_down;
-        $this->frames++;
+
+        if($this->frames < 10) {
+            $this->frames++;
+        }
     }
 
     public function score(): int {
