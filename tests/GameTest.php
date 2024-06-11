@@ -44,5 +44,18 @@ class GameTest extends TestCase
         $frames = $game->getFrames();
         $this->assertEquals(1, $frames);
     }
+
+    public function testThatFramesPropertyHasMaxValueOf10() {
+        $game = new Game();
+        $frames = $game->getFrames();
+        $this->assertEquals(0, $frames);
+
+        for($i = 0; $i <= 15; $i++) {
+            $game->roll(1);
+        }
+
+        $frames = $game->getFrames();
+        $this->assertEquals(10, $frames);
+    }
 }
 
